@@ -19,15 +19,18 @@ using namespace std;
 int main() {
     enum Shape {Square=1, Triangle=2, Pentagon=3, Sentence=4, Quit=5};
     int length;
-    int lineNum;
-    int i, l;
     int signInt;
     char signChar;
     Shape choice;
     int userChoice;
     bool continueOn = true;
     char next;
-	o
+				string usr_sentence;
+				string enteredSent;
+    int lineNum = 0;
+    int minVal = 0;
+
+
     
     system("clear");
     cout << "Welcome to 'Create a Shape'!\n";
@@ -151,29 +154,34 @@ int main() {
                     system("clear");
                 }while(next!='Y'&&next!='N');
                 break;
-            case Sentence: // Sentence for animation
-                cout << "Enter a sentence:" << endl; // Prompt user input
-		cin.ignore(); // allow for input to be read
-		getline(cin,usr_sentence);
-                system ("clear"); // clearing screen
+           case Sentence: // Sentence for animation
+                		cout << "Enter a sentence: " << endl; 						// Prompt user input
+																			cin.ignore(); // allow for input to be read
+																			getline(cin, usr_sentence);
+                		enteredSent = usr_sentence;
+                		system ("clear"); // clearing screen
                 // main loop    
-                lineNum = 0;
-            	for (i = 0; i < usr_sentence.size(); i++) // for every element of users input
+            	for (int index = 0; index < usr_sentence.size(); index++) // for every element of users input
             	{                                         //this loop finds the minimum value in string 
-			if (isdigit(usr_sentence.at(i))) 
-                	{
-                    		usr_sentence.erase(i,1);
+																if (isdigit(usr_sentence.at(index))) 
+                		{
+                    		usr_sentence.erase(index,1);
                     		sleep(1);
                     		system("clear");
-                    		i--;
-                    		lineNum ++;
-                    		for (l = 0; l < lineNum - 1; l++)
+                    		index--;
+                    		lineNum++;
+                    		for (int l = 0; l < lineNum - 1; l++)
                     		{
                         		cout << endl;
                     		}
 
                     		cout << usr_sentence << endl;
-			}
+                	}
+                    	if ((isdigit(minVal)) == false) 
+                    	{	
+                        	continue;
+                   	}
+                
             	}
 
             
@@ -190,6 +198,8 @@ int main() {
                     system("clear");
                 }while(next!='Y'&&next!='N');
                 break;
+
+
             case Quit: // Ask user to continue program. If not, end program
                 do{
                     system("clear");
