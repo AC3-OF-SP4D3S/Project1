@@ -19,12 +19,15 @@ using namespace std;
 int main() {
     enum Shape {Square=1, Triangle=2, Pentagon=3, Sentence=4, Quit=5};
     int length;
+    int lineNum;
+    int i, l;
     int signInt;
     char signChar;
     Shape choice;
     int userChoice;
     bool continueOn = true;
     char next;
+	o
     
     system("clear");
     cout << "Welcome to 'Create a Shape'!\n";
@@ -152,11 +155,9 @@ int main() {
                 cout << "Enter a sentence:" << endl; // Prompt user input
 		cin.ignore(); // allow for input to be read
 		getline(cin,usr_sentence);
-                enteredSent = usr_sentence;
                 system ("clear"); // clearing screen
                 // main loop    
                 lineNum = 0;
-                minVal = 0;
             	for (i = 0; i < usr_sentence.size(); i++) // for every element of users input
             	{                                         //this loop finds the minimum value in string 
 			if (isdigit(usr_sentence.at(i))) 
@@ -172,12 +173,7 @@ int main() {
                     		}
 
                     		cout << usr_sentence << endl;
-                	}
-                    	if (!(isdigit(minVal))) 
-                    	{	
-                        	continue;
-                   	}
-                
+			}
             	}
 
             
