@@ -22,12 +22,14 @@ int main() {
     int lineNum;
     int i, l;
     int signInt;
+    int minVal;
     char signChar;
     Shape choice;
     int userChoice;
     bool continueOn = true;
     char next;
-	o
+	string usr_sentence;
+	string enteredSent;
     
     system("clear");
     cout << "Welcome to 'Create a Shape'!\n";
