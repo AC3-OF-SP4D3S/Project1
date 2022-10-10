@@ -1,43 +1,44 @@
-insert algorithm here
-1. Declare integer length: Get length from user
-2. Declare enumeration constant Shape with values: Square = 1, Triangle = 2, Pentagon = 3, Sentence = 4, and Quit = 5
-3. Generate seeded integer between values 33-64 for signs used in animations
-4. Give enumarted values as choices and let user input a number that will be changed into the coresponding enumerate value (this is the menu)
-5. From point 4 to point _ this needs to be repeated until user says to exit - will use a boolean parameter in do-while loop.
-   Once boolean evaluates to false, the loop will exit and so will the program.
-6. For (1) or Square: (Amanda)
-  a. clear screen
-  b. display square of increasing size up to the inputted length
-    i. to increase size use a for loop to increment
-    ii. to move lines use a for loop to increment
-  c. Ask user to continue: if yes than continue, if no then reevaluate boolean to false to exit main loop
-7. For (2) or Triangle:(Angel)
-8. For (3) or Pentagon: (Amanda & Angel)
-  a. clear screen
-  b. use the code for triangle case, then modify code for square case to display after the triangle case without incrementing (loop needs to go for length - 1)
-  c. Ask user to contine - reevaluates boolean if input is no
-9. For (4) or Sentence: (Eric)
-   1.Ask user to enter string
-   2.Use cin.ignore() to allow for input
-   3.Use get-line to get string input
-   4.Clear the screen with system(“clear”)
-   5.Create int variable linenum and initialize it to 0
-   6.Create for loop to go through each character of the string input
-   7.An if statement to determine if the character is a digit
-   8.If it is a digit, then use erase() method to remove from string
-   9.Create a delay for the animation using sleep()
-   10.Take one off of i using i - - due to the index losing a number from the erase() function.
-   11.Add 1 to the variable linenum so that its value can be used in a for loop
-   12.Create a for loop to make a space each time a number is removed by setting l = 0, l < lineNum - 1 (in order    to get correct index value), and l++ to increment through each element.
-   13.After the for loop, cout the new user sentence with the number removed and it will continue to loop through    until all numbers are removed
-
-10. For (5) or Quit: (Amanda)
-  a. Ask the user again if they would like to exit the program: if yes the program will exit, if no then the program will start again from the menu.
-11. When boolean evaluates to false the do-while loop and a good bye message is displayed and program will close.
-
-
-Note: Libraries to include:
+Libraries to include:
 <iostream>
 <unistd.h>
 <cctype>
 <string>
+
+ 1. Declare integer length: Get length from user
+ 2. Declare enumeration constant Shape with values: Square = 1, Triangle = 2, Pentagon = 3, Sentence = 4, and Quit = 5
+ 3. Generate seeded integer between values 33-64 for symbols used in animations
+ 4. Give enumarted values as choices and let user input a number that will be changed into the coresponding enumerated value (this is the menu)
+ 5. From point 4 to point 10: These need to be repeated until user says to exit. Use a boolean parameter in do-while loop to do so. Once boolean evaluates to false, the loop will exit and the program will end.
+ 6. For case (1) or Square: (Amanda)
+  a. Clear the screen with system(“clear”)
+  b. Display square of increasing size up to the inputted length
+    I. To increase size use a for loop to increment
+   II. To move lines use a for loop to increment
+  c. Ask user to continue: if yes than continue, if no then reevaluate boolean to false to exit loop
+ 7. For case (2) or Triangle: (Abhijeet)
+  a. Clear the screen with system(“clear”)
+  b. Display a triangle that is centered with a height equal to user's length
+    I. Increase number of lines until equal to length
+   II. For each line, there is an odd number of symbols that make up the triangle
+  c. Ask user to continue: if yes, continue. If no, then reevaluate boolean to false to exit loop
+ 8. For case (3) or Pentagon: (Amanda & Abhijeet)
+  a. Clear the screen with system(“clear”)
+  b. Use the code for triangle case, then modify code for square case to display after the triangle case without incrementing (loop needs to go for length - 1)
+  c. Ask user to contine - reevaluates boolean if input is no
+ 9. For case (4) or Sentence: (Eric)
+  a. Ask user to enter string
+  b. Use cin.ignore() to allow for input
+  c. Use get-line to get string input
+  d. Clear the screen with system(“clear”)
+  e. Create int variable numLineSen and initialize it to 0
+  f. Create for loop to go through each character of the string input
+  g. An if statement to determine if the character is a digit
+  h. If it is a digit, then use erase() method to remove from string
+  i. Create a delay for the animation using sleep()
+  j. Take one off of numColSen using numColSen-- due to the index losing a number from the erase() function.
+  k. Add 1 to the variable numLineSen so that its value can be used in a for loop
+  l. Create a for loop to make a space each time a number is removed by setting numRowSen = 0, numRowSen < numLineSen - 1 (in order to get correct index value), and numRowSen++ to increment through each element.
+  m. After the for loop, cout the new user sentence with the number removed and it will continue to loop through until all numbers are removed
+10. For case (5) or Quit: (Amanda)
+  a. Ask the user again if they would like to exit the program: if yes the program will exit, if no then the program will start again from the menu.
+11. When boolean evaluates to false, the do-while loop exits, a goodbye message is displayed, and program will end.
