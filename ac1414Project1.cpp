@@ -214,14 +214,14 @@ int main(){
         }
     }while(continueOn == true);
     
-    for (int i = 0; i <=4; i++){ // Goodbye message
-        if(i==0){
+    for (int indexBye = 0; indexBye <=4; indexBye++){ // Goodbye message
+        if(indexBye==0){
             cout << "Closing 'Create a Shape'";
         }
-        else if (i==1||i==2||i==3){
+        else if (indexBye==1||indexBye==2||indexBye==3){
             cout << " .";
         }
-        else if (i==4){
+        else if (indexBye==4){
             cout << " Goodbye!\n";
         }
         cout.flush();
